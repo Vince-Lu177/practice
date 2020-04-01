@@ -1,4 +1,4 @@
-package Practice_0331;
+package practice.practice.JavaTest;
 
 class Node{
     public char val;
