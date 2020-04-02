@@ -1,5 +1,4 @@
-package Practice_0402;
-
+package practice.practice.JavaTest;
 
 
 import java.util.ArrayList;
