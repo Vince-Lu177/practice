@@ -1,20 +1,19 @@
-package Practice_0402;
+package practice.practice.JavaTest;
 
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Node{
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
-
-    public Node(int val) {
-        this.val = val;
-    }
-}
-
 public class LevelOrderPractice{
+    class Node{
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+
+        public Node(int val) {
+            this.val = val;
+        }
+    }
     public void levelOrder(TreeNode root){
         //此处不能使用递归来解决了
         //可以借助一个队列来解决
