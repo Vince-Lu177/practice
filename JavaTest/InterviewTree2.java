@@ -7,42 +7,7 @@ public class InterviewTree2 {
     //如果从某个节点开始，后序遍历的时候能够把p q都找到，并且p q不在同一个子树中，说明该节点是p q的最近公共祖先
     //p和q可能出现在三个位置，左子树，右子树，当前节点中
     //如果p和q分布在三个位置中的两个，就认为该节点就是最近公共祖先
-    class TreeNode{
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-        public TreeNode(int val) {
-            this.val = val;
-        }
-    }
-    private TreeNode lca = null;
-    public TreeNode lowestCommonAncestor(TreeNode root,TreeNode p,TreeNode q){
-        if(root == null){
-            return null;
-        }
-        //借助findNode方法找，找到了就吧结果放在lca中
-        findNode(root,p,q);
-        return lca;
-    }
-    //看从root出发能否找到P或q，只要找到一个就返回true，都找不到就返回false；
-    private boolean findNode(TreeNode root, TreeNode p, TreeNode q) {
-        if(root == null){
-            return false;
-        }
-        //递归按照后序遍历的方式进行
-        int left = findNode(root.left,p,q) ? 1 : 0;
-        int right = findNode(root.right,p,q) ? 1 :0;
-        int mid = (root == p || root == q) ? 1 :0;
-        if(left + right + mid == 2){
-            lca = root;
-        }
-        //相加为0；当前节点不是p q的祖先
-        //相加为1；当前节点可能是p的祖先，也可能是q的祖先，也可能是p q的祖先，但肯定不是p q的公共祖先
-        //相加为2；当前节点是p q的公共祖先
-        return (left + right + mid) > 0;
-        //如果三个位置之和为0；说明没找到，返回false
-        //只要找到一个或者以上都返回true；
-    }
+
     //二叉搜索树转换成排序双向链表
     //输入一颗二叉搜索树，将该二叉搜索树装换成一个排序的双向链表(不能创建新的节点，只能改变整棵树中节点的指向)
     //解决这个问题的关键：中序排列
