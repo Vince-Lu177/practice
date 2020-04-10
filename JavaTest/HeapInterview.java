@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+//查找和最小的k对数字
+//给定两个以升序排列的整形数组nums1和nums2，以及一个整数k,定义一对值(u,v),其中第一个元素来自nums1，第二个数来自nums2
+//找到和最小的k对数字(u1,v1),(u2,v2)...(uk,vk)
+//1.获取到所有数对
+//2.把数对都放在队列中
+//再从优先队列中取出前k个元素
 public class HeapInterview {
      class pair implements Comparable<pair>{
         public int n1;
