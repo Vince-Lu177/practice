@@ -2,11 +2,11 @@ package practice.practice.JavaTest;
 
 
 public class TestSort {
-    //插入排序：和顺序表插入十分相似
-    //[0,bound) 已排序区间
-    //[bound,size) 待排序区间
-    //先获取bound位置的元素，往已排序区间插入，插入完毕后已排序任然是有序的
-    //吧bound位置的元素在前面找个合适的位置，同时需要搬运附近相关元素
+//    插入排序：和顺序表插入十分相似
+//    [0,bound) 已排序区间
+//    [bound,size) 待排序区间
+//    先获取bound位置的元素，往已排序区间插入，插入完毕后已排序任然是有序的
+//    把bound位置的元素在前面找个合适的位置，同时需要搬运附近相关元素
     public static void insertSort (int[] array){
         //通过bound来划分区间
         for (int bound = 1; bound < array.length; bound++) {
