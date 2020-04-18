@@ -1,8 +1,8 @@
-package Practice_0329;
+package practice.practice.JavaTest;
 
 import java.util.Stack;
 
-public class MinStack {
+class MinStack {
     //实现最小栈，且时间复杂度为O(1)---用空间换时间
     //创建两个栈A B，A中按正常栈的规则插入删除元素
     //B存放的是当前栈的最小值
