@@ -1,4 +1,4 @@
-package Practice_0416;
+package practice.practice.JavaTest;
 
 import java.util.*;
 
